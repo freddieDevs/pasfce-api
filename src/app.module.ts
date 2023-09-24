@@ -8,6 +8,7 @@ import { ReportModule } from './report/report.module';
 import { ClusterModule } from './cluster/cluster.module';
 import { PassportModule } from '@nestjs/passport';
 import { StaffModule } from './staff/staff.module';
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     // ServeStaticModule.forRoot({
@@ -20,6 +21,7 @@ import { StaffModule } from './staff/staff.module';
     MemberModule,
     ReportModule,
     ClusterModule,
+    ConfigModule.forRoot(), //enables the use of environment variables
   ],
   controllers: [],
   providers: [],
