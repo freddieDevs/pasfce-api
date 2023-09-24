@@ -5,6 +5,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
   app.enableCors();
-  await app.listen('https://amused-coveralls-seal.cyclic.cloud');
+  await app.listen('https://long-jade-eagle-wear.cyclic.cloud');
 }
 bootstrap();
