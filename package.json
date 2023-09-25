@@ -6,8 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "pre-build": "rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "nest build",
+    "postbuild": "npm run copy-package-json",
+    "copy-package-json": "cp package.json dist/package.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/main",
     "dev": "nest start --watch --preserveWatchOutput",
