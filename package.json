@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "postbuild": "npm run copy-package-json",
+    "postbuild": "npm run copy-package-json && npm ci --only=production",
     "copy-package-json": "cp package.json dist/package.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node main",
