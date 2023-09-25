@@ -6,7 +6,7 @@ import { Callback, Context, Handler } from 'aws-lambda';
 let server: Handler;
 
 async function bootstrap() {
-  const port = process.env.PORT || 3000;
+  // const port = process.env.PORT || 3000;
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
   app.enableCors();
