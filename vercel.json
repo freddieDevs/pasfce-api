@@ -9,7 +9,7 @@
   "routes": [
     { 
       "src": "/api/(.*)", 
-      "dest": "src/serverless.ts",
+      "dest": "/.vercel/output/functions/src/serverless.js",
       "methods": [
         "GET",
         "POST",
