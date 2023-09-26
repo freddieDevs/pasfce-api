@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
       "src": "src/main.ts",
@@ -8,12 +8,47 @@
   ],
   "routes": [
     { 
-      "src": "/api/(.*)", 
-      "dest": "src/main.ts",
+      "src": "/api/clusters/(.*)", 
+      "dest": "src/cluster/cluster.controller.ts",
       "methods": [
         "GET",
         "POST",
         "PATCH",
+        "DELETE"
+      ]
+    },
+    { 
+      "src": "/api/clusters/(.*)", 
+      "dest": "src/management/management.controller.ts",
+      "methods": [
+        "POST"
+      ]
+    },
+    { 
+      "src": "/api/member/(.*)", 
+      "dest": "src/member/member.controller.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH",
+        "DELETE"
+      ]
+    },
+    { 
+      "src": "/api/report/(.*)", 
+      "dest": "src/report/report.controller.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH",
+        "DELETE"
+      ]
+    },
+    { 
+      "src": "/api/staff/(.*)", 
+      "dest": "src/staff/staff.controller.ts",
+      "methods": [
+        "GET",
         "DELETE"
       ]
     }
