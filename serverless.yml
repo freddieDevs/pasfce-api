@@ -13,11 +13,12 @@ provider:
     JWT_SECRET=${env:JWT_SECRET}
 
 functions:
-  main: dist/serverless.handler
+  main: 
+    handler: dist/serverless.handler
   events: 
     - http: 
       method: ANY
       path: /
-    -http: 
+    - http: 
       method: ANY
       path: '{proxy+}'
