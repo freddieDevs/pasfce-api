@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "copy-package-json": "cp package.json dist/package.json",
-    "postbuild": "npm run copy-package-json && npm install --only=production && npm install @nestjs/core --save-dev",
+    "postbuild": "npm run copy-package-json && npm install --only=production && npm install @nestjs/core --save",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node ./serverless.js",
     "dev": "nest start --watch --preserveWatchOutput",
