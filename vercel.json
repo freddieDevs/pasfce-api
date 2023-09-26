@@ -1,15 +1,17 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "src/main.ts",
-      "use": "@vercel/node"
-    } 
+    { "src": "src/main.ts", "use": "@vercel/node" },
+    { "src": "src/cluster/cluster.controller.ts", "use": "@vercel/node" },
+    { "src": "src/management/management.controller.ts", "use": "@vercel/node" },
+    { "src": "src/member/member.controller.ts", "use": "@vercel/node" },
+    { "src": "src/report/report.controller.ts", "use": "@vercel/node" },
+    { "src": "src/staff/staff.controller.ts", "use": "@vercel/node" }
   ],
   "routes": [
     { 
       "src": "/api/clusters/(.*)", 
-      "dest": "src/cluster/cluster.controller.ts",
+      "dest": ".vercel/output/functions/src/cluster/cluster.controller.js",
       "methods": [
         "GET",
         "POST",
@@ -18,15 +20,15 @@
       ]
     },
     { 
-      "src": "/api/clusters/(.*)", 
-      "dest": "src/management/management.controller.ts",
+      "src": "/api/management/(.*)", 
+      "dest": ".vercel/output/functions/src/management/management.controller.js",
       "methods": [
         "POST"
       ]
     },
     { 
       "src": "/api/member/(.*)", 
-      "dest": "src/member/member.controller.ts",
+      "dest": ".vercel/output/functions/src/member/member.controller.js",
       "methods": [
         "GET",
         "POST",
@@ -36,7 +38,7 @@
     },
     { 
       "src": "/api/report/(.*)", 
-      "dest": "src/report/report.controller.ts",
+      "dest": ".vercel/output/functions/src/report/report.controller.js",
       "methods": [
         "GET",
         "POST",
@@ -46,7 +48,7 @@
     },
     { 
       "src": "/api/staff/(.*)", 
-      "dest": "src/staff/staff.controller.ts",
+      "dest": ".vercel/output/functions/src/staff/staff.controller.js",
       "methods": [
         "GET",
         "DELETE"
