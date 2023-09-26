@@ -1,58 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "src/main.ts", "use": "@vercel/node" },
-    { "src": "src/cluster/cluster.controller.ts", "use": "@vercel/node" },
-    { "src": "src/management/management.controller.ts", "use": "@vercel/node" },
-    { "src": "src/member/member.controller.ts", "use": "@vercel/node" },
-    { "src": "src/report/report.controller.ts", "use": "@vercel/node" },
-    { "src": "src/staff/staff.controller.ts", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { 
-      "src": "/api/clusters/(.*)", 
-      "dest": ".vercel/output/functions/src/cluster/cluster.controller.js",
-      "methods": [
-        "GET",
-        "POST",
-        "PATCH",
-        "DELETE"
-      ]
-    },
-    { 
-      "src": "/api/management/(.*)", 
-      "dest": ".vercel/output/functions/src/management/management.controller.js",
-      "methods": [
-        "POST"
-      ]
-    },
-    { 
-      "src": "/api/member/(.*)", 
-      "dest": ".vercel/output/functions/src/member/member.controller.js",
-      "methods": [
-        "GET",
-        "POST",
-        "PATCH",
-        "DELETE"
-      ]
-    },
-    { 
-      "src": "/api/report/(.*)", 
-      "dest": ".vercel/output/functions/src/report/report.controller.js",
-      "methods": [
-        "GET",
-        "POST",
-        "PATCH",
-        "DELETE"
-      ]
-    },
-    { 
-      "src": "/api/staff/(.*)", 
-      "dest": ".vercel/output/functions/src/staff/staff.controller.js",
-      "methods": [
-        "GET",
-        "DELETE"
-      ]
+  "buildCommand": "nest build",
+  "cleanUrls": true,
+  "framework": null,
+  "outputDirectory": "build",
+  "functions": {
+    "api/serverless.ts": {
+      "memory": 1024,
+      "maxDuration": 10
     }
-  ]
+  }
+  
+ 
 }
