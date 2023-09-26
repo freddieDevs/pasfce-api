@@ -8,8 +8,8 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "copy-package-json": "cp package.json dist/package.json",
-    "postbuild": "npm run copy-package-json && npm install --only=production && npm install @nestjs/core --save",
+    "postbuild": "npm run copy-package-json",
+    "copy-package-json": "cp package.json dist/package.json && cp node_modules dist/node_modules",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node ./serverless.js",
     "dev": "nest start --watch --preserveWatchOutput",
