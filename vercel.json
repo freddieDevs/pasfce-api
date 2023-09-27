@@ -2,13 +2,5 @@
   "buildCommand": "nest build",
   "cleanUrls": true,
   "framework": null,
-  "outputDirectory": "build",
-  "functions": {
-    "api/serverless.ts": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  }
-  
- 
+  "outputDirectory": "build"
 }
