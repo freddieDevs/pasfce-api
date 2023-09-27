@@ -1,6 +1,15 @@
 {
-  "buildCommand": "nest build",
-  "cleanUrls": true,
-  "framework": null,
-  "outputDirectory": "build"
+  "builds": [
+    {
+      "src": "build/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "destination": "build/main.js",
+      "methods": [ "GET", "POST", "PUT", "PATCH", "DELETE"]
+    }
+  ]
 }

@@ -8,8 +8,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
-    "outDir": "./.vercel",
-    "baseUrl": "./",
+    "outDir": "./build", //where to output builds 
+    "baseUrl": "./", //where tsconfig is located
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -17,6 +17,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true
+    //"esModuleInterop": true, //for serverless fuctions
+    // "noEmit": true //lets ts detect the error 
   }
 }
