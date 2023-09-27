@@ -2,12 +2,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": "/build",
   "framework": "null",
-  "builds": [
-      {
-          "src": "src/api/main.ts",
-          "use": "@vercel/node"
-      }
-  ],
+  "build": {
+    "env": {
+      "NODEJS_AWS_HANDLER_NAME": "handler"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
