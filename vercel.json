@@ -9,8 +9,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)", 
-      "destination": "src/api",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+      "destination": "src/api"
     }
   ]
 }
