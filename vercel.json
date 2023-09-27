@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "/build",
-  "framework": "null",
   "build": {
     "env": {
       "NODEJS_AWS_HANDLER_NAME": "handler"
