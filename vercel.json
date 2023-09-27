@@ -1,8 +1,8 @@
 {
   "builds": [
     {
-      "src": "build/main.js",
-      "use": "@vercel/node"
+      "src": "src/**/*",
+      "use": "npm run build"
     }
   ],
   "routes": [
