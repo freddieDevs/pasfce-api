@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "destination": "build/main.js",
+      "dest": "build/main.js",
       "methods": [ "GET", "POST", "PUT", "PATCH", "DELETE"]
     }
   ]
