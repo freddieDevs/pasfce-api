@@ -9,6 +9,7 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./build", //where to output builds 
+    "rootDir": "./src",
     "baseUrl": "./", //where tsconfig is located
     "incremental": true,
     "skipLibCheck": true,
@@ -19,5 +20,7 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true, //for serverless fuctions
     // "noEmit": true //lets ts detect the error 
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["test/**/*.ts"]
 }
