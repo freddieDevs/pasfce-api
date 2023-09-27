@@ -17,7 +17,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    //"esModuleInterop": true, //for serverless fuctions
+    "esModuleInterop": true, //for serverless fuctions
     // "noEmit": true //lets ts detect the error 
   }
 }
