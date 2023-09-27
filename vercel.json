@@ -6,17 +6,11 @@
       "NODEJS_AWS_HANDLER_NAME": "handler"
     }
   },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/api/main.ts",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)", 
-      "destination": "src/api"
+      "destination": "src/api",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
     }
   ]
 }
