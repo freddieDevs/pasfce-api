@@ -6,9 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build": "rimraf build && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"index.js\"",
-    "start": "node dist/main.js",
+    "start": "node build/api/[app]/handler.js",
     "dev": "nest start --watch --preserveWatchOutput",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
